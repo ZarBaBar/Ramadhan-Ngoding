@@ -24,7 +24,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 3em;
-  padding-top: 2em;
+  padding-top: 1.7em;
 }
 
 .container {
@@ -40,8 +40,8 @@ body {
 
 button {
   border-radius: 10px;
-  padding: 1em;
-  margin: 1vh;
+  padding: 2.6em;
+  margin: 1.8em;
   background-color: #c5eeee;
   border: 2px solid #0c0f0d;
   cursor: pointer;
@@ -59,16 +59,16 @@ button:hover {
   padding: 0.4em;
   border: 1px solid #ccc;
   border-radius: 5px;
-  margin-top: 0.3em;
+  margin-top: 0.2em;
   overflow-y: scroll;
   max-height: 75vh;
 }
 .kalimat {
   width: 100%;
-  max-width: 30em;
+  max-width: 35em;
+  max-height: 75vh;
   white-space: wrap;
   overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .rawsil {
@@ -97,6 +97,24 @@ button:hover {
   justify-content: center;
   margin-right: 20vh;
   font-size: 1rem;
+}
+
+.error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
+  margin: 0.7em;
+  color: #f1f1f1;
+  font-weight: bold;
+}
+
+.starter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1em;
+  font-weight: 400;
 }
 
 @media (max-width: 768px) {

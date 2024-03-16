@@ -21,10 +21,42 @@ async function fetchData(endpoint) {
     const nomorHadits = dataHadits.hadithnumber;
     const isiHadits = dataHadits.text;
 
+    if (isiHadits == "") {
+      document.querySelector(
+        ".result"
+      ).innerHTML = `<div class="error">COBA LAGI</div>`;
+      document.querySelector(".wrapper").style.backgroundColor = "red";
+    } else {
+      document.querySelector(".wrapper").innerHTML = `
+
+    
+        <div class="container">
+            <div class="kotakanIsi">
+                <div class="result">
+                      <div class="rawsil">
+      <div class="rawi">${rawi}</div>
+      <div class="nomor">${nomorHadits}</div>
+  </div>
+  
+  <div class="hasil">
+  
+      <div class="kalimat">
+      ${isiHadits}
+      </div>
+  
+  </div>
+                </div>
+            </div>
+        </div>
+   
+
+
+  
+      `;
+      document.querySelector(".wrapper").style.backgroundColor = "#f1f1f1";
+    }
+
     // Menuliskan ke HTML
-    document.querySelector(".rawi").textContent = rawi;
-    document.querySelector(".nomor").textContent = nomorHadits;
-    document.querySelector(".kalimat").textContent = isiHadits;
   } catch (error) {
     console.error(`Download error: ${error.message}`);
   }
